@@ -1,0 +1,36 @@
+int degradado = 255;
+
+void setup(){
+  size(500,350);
+}
+
+void draw(){
+  colorMode(HSB, 360, 100, 100);
+  background(360, 100-mouseY*.2, mouseY+10);
+  noStroke();
+  degradado = mouseY;
+  colorMode(RGB,255,255,255);
+  fill(255,degradado,50);  
+  ellipse(250,-mouseY+405,100,100);
+  
+  if(mousePressed){
+  background(0);
+  fill(255);  
+  ellipse(250,-mouseY+405,100,100);
+  fill(0);  
+  ellipse(239,-mouseY+399,100,100);
+    
+  //hoshi
+  fill(255);
+  ellipse(50,50,3,3);
+  ellipse(100,120,3,3);
+  ellipse(180,70,3,3);
+  ellipse(300,20,3,3);
+  ellipse(150,180,3,3);
+  ellipse(390,110,3,3);
+  ellipse(440,160,3,3);
+  ellipse(470,90,3,3);
+  ellipse(30,190,3,3);
+  }
+  
+}
